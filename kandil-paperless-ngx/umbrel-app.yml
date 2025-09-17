@@ -1,0 +1,64 @@
+manifestVersion: 1
+id: kandil-paperless-ngx
+name: Paperless-ngx
+version: "2.18.4"
+category: files
+icon: https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/src-ui/src/assets/logo-notext.svg
+tagline: Scan, index, and archive all of your documents
+description: >-
+  Paperless-ngx is a community-supported supercharged version of paperless: scan, index and archive all your physical documents.
+
+
+  📄 **Document Management Made Easy**
+
+  - Scan documents and store them digitally
+  - Powerful OCR with full-text search capabilities
+  - Machine learning powered document classification
+  - Email integration for automatic document import
+  - Mobile app support with REST API
+
+
+  🔍 **Advanced Features**
+
+  - Automatic document tagging and categorization
+  - Custom fields and metadata support
+  - Advanced search with filters and saved views
+  - Document workflows and bulk operations
+  - Multi-user support with permissions
+  - Audit trails and document versioning
+
+
+  🔧 **Integration & Automation**
+
+  - Email account integration
+  - Barcode and QR code support
+  - Webhooks for external integrations
+  - Import from various sources (files, emails, etc.)
+  - Export capabilities (JSON, PDF, etc.)
+
+
+  📁 **Umbrel File Manager Integration**
+
+  - Access your documents via File Manager → Storage → paperless
+  - Drop files in consume/ folder for automatic processing
+  - Download exports directly from export/ folder
+  - Browse your document library in media/ folder
+
+
+  After installation, the app will be accessible through your Umbrel dashboard. Document folders are fully accessible through Umbrel's file manager.
+developer: Paperless-ngx Team
+website: https://docs.paperless-ngx.com
+dependencies: []
+repo: https://github.com/paperless-ngx/paperless-ngx
+support: https://github.com/paperless-ngx/paperless-ngx/discussions
+port: 8000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: "admin"
+deterministicPassword: true
+torOnly: false
+submitter: Ahmed Kandil
+submission: https://github.com/ahmedkandel/umbrel-paperless-ngx
