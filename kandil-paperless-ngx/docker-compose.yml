@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.7"
 
 services:
   app_proxy:
@@ -79,14 +79,10 @@ services:
     image: ghcr.io/paperless-ngx/paperless-ngx:2.18.4@sha256:7729fccc4a763ca85bac26b9c4a495b6816e59be8fbd27d29c0e773201bfc6e7
     restart: unless-stopped
     depends_on:
-      paperless-db:
-        condition: service_healthy
-      paperless-redis:
-        condition: service_healthy
-      paperless-gotenberg:
-        condition: service_started
-      paperless-tika:
-        condition: service_started
+      - paperless-db
+      - paperless-redis
+      - paperless-gotenberg
+      - paperless-tika
     volumes:
       # Internal app data - not accessible via Umbrel GUI
       - ${APP_DATA_DIR}/data/config:/usr/src/paperless/data
@@ -158,7 +154,6 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
-      start_period: 60s
     logging:
       driver: "json-file"
       options:
@@ -203,7 +198,6 @@ services:
       interval: 60s
       timeout: 30s
       retries: 3
-      start_period: 30s
 
   paperless-tika:
     image: docker.io/apache/tika:3.0.0@sha256:5a90f5c2a2e8e1c6b0eb3fb1e2b9fe92ba5f0df50f56e0b77be7b5c8b0c9f1e9
@@ -227,4 +221,3 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 30s
